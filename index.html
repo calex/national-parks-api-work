@@ -4,19 +4,74 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>List a User's Github Repos</title>
+        <title>National Parks in Your State</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="container">
-            <h1>List a User's Github Repos</h1>
-
-            <p>Search for the public Github repos that a user owns.</p>
+            <h1>National Parks in Your State</h1>
+            <p>Search for the national parks in your (and/or any other) state.</p>
+            
             <form id="js-search-form">
-                <label for="search-term">Enter user’s Github Handle</label>
-                <input type="text" name="search-term" id="js-search-term" required="true" placeholder="e.g. calex">
-
-                <input type="submit" value="Go!">
+                <fieldset class="checkboxes">
+                    <legend>Select one or more state(s) to see a list of parks at least partially located within its borders.</legend>
+                    <div class="checkboxes__inner">
+                        <label><input type="checkbox" name="states[]" value="AL">Alabama</label>
+                        <label><input type="checkbox" name="states[]" value="AK">Alaska</label>
+                        <label><input type="checkbox" name="states[]" value="AZ">Arizona</label>
+                        <label><input type="checkbox" name="states[]" value="AR">Arkansas</label>
+                        <label><input type="checkbox" name="states[]" value="CA">California</label>
+                        <label><input type="checkbox" name="states[]" value="CO">Colorado</label>
+                        <label><input type="checkbox" name="states[]" value="CT">Connecticut</label>
+                        <label><input type="checkbox" name="states[]" value="DE">Delaware</label>
+                        <label><input type="checkbox" name="states[]" value="DC">District Of Columbia</label>
+                        <label><input type="checkbox" name="states[]" value="FL">Florida</label>
+                        <label><input type="checkbox" name="states[]" value="GA">Georgia</label>
+                        <label><input type="checkbox" name="states[]" value="HI">Hawaii</label>
+                        <label><input type="checkbox" name="states[]" value="ID">Idaho</label>
+                        <label><input type="checkbox" name="states[]" value="IL">Illinois</label>
+                        <label><input type="checkbox" name="states[]" value="IN">Indiana</label>
+                        <label><input type="checkbox" name="states[]" value="IA">Iowa</label>
+                        <label><input type="checkbox" name="states[]" value="KS">Kansas</label>
+                        <label><input type="checkbox" name="states[]" value="KY">Kentucky</label>
+                        <label><input type="checkbox" name="states[]" value="LA">Louisiana</label>
+                        <label><input type="checkbox" name="states[]" value="ME">Maine</label>
+                        <label><input type="checkbox" name="states[]" value="MD">Maryland</label>
+                        <label><input type="checkbox" name="states[]" value="MA">Massachusetts</label>
+                        <label><input type="checkbox" name="states[]" value="MI">Michigan</label>
+                        <label><input type="checkbox" name="states[]" value="MN">Minnesota</label>
+                        <label><input type="checkbox" name="states[]" value="MS">Mississippi</label>
+                        <label><input type="checkbox" name="states[]" value="MO">Missouri</label>
+                        <label><input type="checkbox" name="states[]" value="MT">Montana</label>
+                        <label><input type="checkbox" name="states[]" value="NE">Nebraska</label>
+                        <label><input type="checkbox" name="states[]" value="NV">Nevada</label>
+                        <label><input type="checkbox" name="states[]" value="NH">New Hampshire</label>
+                        <label><input type="checkbox" name="states[]" value="NJ">New Jersey</label>
+                        <label><input type="checkbox" name="states[]" value="NM">New Mexico</label>
+                        <label><input type="checkbox" name="states[]" value="NY">New York</label>
+                        <label><input type="checkbox" name="states[]" value="NC">North Carolina</label>
+                        <label><input type="checkbox" name="states[]" value="ND">North Dakota</label>
+                        <label><input type="checkbox" name="states[]" value="OH">Ohio</label>
+                        <label><input type="checkbox" name="states[]" value="OK">Oklahoma</label>
+                        <label><input type="checkbox" name="states[]" value="OR">Oregon</label>
+                        <label><input type="checkbox" name="states[]" value="PA">Pennsylvania</label>
+                        <label><input type="checkbox" name="states[]" value="RI">Rhode Island</label>
+                        <label><input type="checkbox" name="states[]" value="SC">South Carolina</label>
+                        <label><input type="checkbox" name="states[]" value="SD">South Dakota</label>
+                        <label><input type="checkbox" name="states[]" value="TN">Tennessee</label>
+                        <label><input type="checkbox" name="states[]" value="TX">Texas</label>
+                        <label><input type="checkbox" name="states[]" value="UT">Utah</label>
+                        <label><input type="checkbox" name="states[]" value="VT">Vermont</label>
+                        <label><input type="checkbox" name="states[]" value="VA">Virginia</label>
+                        <label><input type="checkbox" name="states[]" value="WA">Washington</label>
+                        <label><input type="checkbox" name="states[]" value="WV">West Virginia</label>
+                        <label><input type="checkbox" name="states[]" value="WI">Wisconsin</label>
+                        <label><input type="checkbox" name="states[]" value="WY">Wyoming</label>
+                    </div>
+                </fieldset>	
+                <br />
+                <label>Maximum Results to Return <input id="search-limit-choice" type="number" min="1" value="10"></input></label>
+                <input type="submit" value="List parks">
             </form>
 
             <p id="js-error-message" class="error-message hidden"></p>
